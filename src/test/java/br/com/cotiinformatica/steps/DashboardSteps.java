@@ -29,7 +29,7 @@ public class DashboardSteps {
        options.addArguments("--no-sandbox"); // necessário em GitHub Actions
        options.addArguments("--disable-dev-shm-usage"); // necessário em CI/Linux
        options.addArguments("--remote-allow-origins=*");
-		
+       driver = new ChromeDriver(options);
 		
 		//maximizar o navegador
 		driver.manage().window().maximize();
@@ -76,13 +76,11 @@ public class DashboardSteps {
 	@Dado("eu estou na página do dashboard")
 	public void eu_estou_na_página_do_dashboard() {
 		
-		//Capturar o link da página no menu do sistema
-		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated
-				(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[8]/a")));
-		
-		//Clicar no link
-		element.click();
+		driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+		String urlAtual = driver.getCurrentUrl();
+		assertEquals("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index", urlAtual);
 	}
+	
 	@Então("o sistema exibe os indicadores principais da aplicação")
 	public void o_sistema_exibe_os_indicadores_principais_da_aplicação() {
 		
