@@ -1,18 +1,18 @@
-\# Projeto de Testes Automatizados
+# Projeto de Testes Automatizados
 
-Este projeto utiliza \*\*Java\*\*, \*\*Maven\*\*, \*\*Selenium WebDriver\*\* e \*\*Cucumber BDD\*\* para automação de testes.
+Este projeto utiliza **Java**, **Maven**, **Selenium WebDriver** e **Cucumber BDD** para automação de testes.
 
-\## Tecnologias
+## Tecnologias
 
-\- Java 21+
+- Java 21+
 
-\- Maven
+- Maven
 
-\- Selenium WebDriver
+- Selenium WebDriver
 
-\- Cucumber BDD
+- Cucumber BDD
 
-\- JUnit
+- JUnit
 
 
 
